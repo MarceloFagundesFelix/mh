@@ -1,0 +1,12 @@
+10  dat a b p x
+20  rst p       %caso exista linha = ao 
+30  inc p       %NoLinhas + NoLoops
+40  loop b      %irá entrar em loop
+45     rst x    %neste caso: 12+3
+50     loop p
+60        loop a
+70           inc x
+80        end
+90     end
+100    cpy p x
+110 end

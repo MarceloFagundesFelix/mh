@@ -1,0 +1,27 @@
+1  dat X A Y X1 X2 Impar % testa se X eh Impar
+2  loop X % se x>0
+3     rst X1   % X1:=x-1
+4     rst Y
+5     loop X
+6        cpy X1 Y
+7        inc Y
+8     end
+9     loop X1          % se x-1>0
+10       rst X2      % X2:=x-2
+11       rst Y
+12       loop X1
+13          cpy X2 Y
+14          inc Y
+15       end
+16       loop X2       % se x-2>0
+17          cpy X X2
+18          jum 2       % continua decrementando 2
+19       end
+20       rst Impar      % se x-2=0 entao x nao eh impar!
+21       jum 28         % termina com Impar=0
+22    end
+23    rst Impar
+24    inc Impar         % entao x eh Impar
+25    jum 28
+26 end
+27 rst Impar % se x=0 entao eh par

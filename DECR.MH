@@ -1,0 +1,7 @@
+1  dat b x y 
+2  rst x
+3  loop b
+4    cpy y x
+5    inc x
+6  end
+7  cpy b y

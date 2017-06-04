@@ -1,0 +1,26 @@
+10  dat q d a b dma x y s % q <- a:b   
+20  rst q
+30  rst d		% construiremos o dividendo
+40  loop a		% no máximo teremos q=a
+50    loop b
+60      inc d
+70    end               %   d <- d+b
+80    cpy dma d		% testa se d<=a
+90    loop a		% dma <- d-a 
+100      rst x
+110      loop dma
+120         cpy y x
+130        inc x
+140     end		
+150     cpy dma y	% decrementando dma	
+160   end		% 		a vezes
+170   cpy y dma		% y <- d-a
+180   rst x
+190   inc x		% x <- 1 
+200   loop y
+210     rst x
+220   end     		% x <-(y=0) ou seja, 
+230   loop x		% se d <= a ainda então
+240      inc q		% 	incrementa o quociente 
+280   end
+290 end

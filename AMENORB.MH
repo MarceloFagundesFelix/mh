@@ -1,0 +1,29 @@
+10  dat x y a b p q r 
+50  cpy r a
+60  Loop b       % x <- a-b
+70    rst p
+80    Loop r
+90      cpy q p
+100     inc p
+110   end
+115   cpy r q
+120 end
+125 cpy x q
+130 cpy r b
+140 Loop a       % y <- b-a
+150   rst p
+160   Loop r
+170     cpy q p
+180     inc p
+190   end
+195   cpy r q
+200 end
+210 cpy y q
+220 rst r
+230 loop y
+240   rst r
+250   inc r
+260   loop x
+270     rst r
+280   end
+290 end
